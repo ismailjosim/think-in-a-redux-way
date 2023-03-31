@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
-import Counter from './components/Counter';
 import store from './redux/store';
 import HooksCounter from './components/HooksCounter';
+import DynamicHooksCounter from './components/DynamicHooksCounter';
 
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
                 </h1>
                 <div className="max-w-md mx-auto mt-10 space-y-5">
                     <HooksCounter />
+                    <DynamicHooksCounter />
                 </div>
             </div>
         </Provider>

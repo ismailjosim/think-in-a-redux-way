@@ -1,7 +1,16 @@
-import { createStore } from 'redux';
-import counterReducer from './counter/counterReducers';
+import { createStore, applyMiddleware } from 'redux';
+import rootReducer from './rootReducer';
+
+// all middleware
+import myLogger from './middlewares/myLogger'
+import logger from 'redux-logger';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 
-const store = createStore(counterReducer)
+
+
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(logger, myLogger)))
 
 export default store;
+
+
