@@ -2,7 +2,7 @@ import { DECREMENT, INCREMENT } from './actionTypes'
 
 
 // increment action
-export const increment = (value) => {
+export const increment = value => {
     return {
         type: INCREMENT,
         payload: value
@@ -10,7 +10,7 @@ export const increment = (value) => {
 }
 
 // decrement action
-export const decrement = (value) => {
+export const decrement = value => {
     return {
         type: DECREMENT,
         payload: value
