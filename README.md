@@ -3,3 +3,4 @@
 <h2>Practice Repo</h2>
 
 * Redux Fundamentals
+* hooks and middleware
