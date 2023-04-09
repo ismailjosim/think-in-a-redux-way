@@ -1,25 +1,26 @@
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import HooksCounter from './components/HooksCounter';
-import DynamicHooksCounter from './components/DynamicHooksCounter';
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import TodoList from "./components/TodoList";
 
-
-const App = () => {
-
+function App() {
     return (
-        <Provider store={ store }>
-            <div className="w-screen h-screen p-10 bg-gray-100 text-slate-700">
-                <h1 className="max-w-md mx-auto text-center text-2xl font-bold">
-                    hello world
-                </h1>
-                <div className="max-w-md mx-auto mt-10 space-y-5">
-                    <HooksCounter />
-                    <DynamicHooksCounter />
-                </div>
-            </div>
-        </Provider>
-    );
+        <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
+            <Navbar />
 
-};
+            <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
+                <Header />
+
+                <hr className="mt-4" />
+
+                <TodoList />
+
+                <hr className="mt-4" />
+
+                <Footer />
+            </div>
+        </div>
+    );
+}
 
 export default App;
