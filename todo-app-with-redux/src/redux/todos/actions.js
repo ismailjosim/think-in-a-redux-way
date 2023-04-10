@@ -1,6 +1,6 @@
 import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, COLORSELECTED, TOGGLED } from './actionTypes'
 
-// Add action
+// Add action New todo
 export const added = todoText => {
     return {
         type: ADDED,
@@ -17,7 +17,7 @@ export const toggled = todoId => {
 }
 
 // selected color action
-export const colorselected = (todoId, color) => {
+export const colorSelected = (todoId, color) => {
     return {
         type: COLORSELECTED,
         payload: {
@@ -26,6 +26,7 @@ export const colorselected = (todoId, color) => {
         }
     }
 }
+
 // selected color action
 export const deleted = todoId => {
     return {
@@ -41,6 +42,7 @@ export const allCompleted = () => {
 
     }
 }
+
 // clear Completed Todo
 export const clearCompleted = () => {
     return {
