@@ -17,6 +17,11 @@ export default function Header() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (input === '') {
+            alert("Add Some text");
+            return
+        }
+
         dispatch(added(input))
         setInput('')
     }
