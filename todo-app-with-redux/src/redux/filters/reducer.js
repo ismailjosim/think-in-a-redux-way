@@ -4,12 +4,13 @@ import initialState from './initialState';
 
 
 const filtersReducer = (state = initialState, action) => {
-    switch (action.payload) {
+    switch (action.type) {
         case STATUSCHANGED:
             return {
                 ...state,
-                state: action.payload
+                status: action.payload,
             }
+
         case COLORCHANGED:
             const { color, changeType } = action.payload;
 
@@ -26,9 +27,7 @@ const filtersReducer = (state = initialState, action) => {
                     }
                 default:
                     return state;
-
             }
-
         default:
             return state;
     }

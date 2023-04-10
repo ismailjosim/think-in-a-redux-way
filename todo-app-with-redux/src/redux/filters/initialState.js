@@ -1,5 +1,5 @@
 const initialState = {
-    status: "ALL",
+    status: "All",
     colors: []
 }
 
