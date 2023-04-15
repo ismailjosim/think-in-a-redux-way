@@ -1,3 +1,0 @@
-#
-
-# Hooks and Middleware
