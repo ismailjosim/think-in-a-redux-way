@@ -1,3 +1,4 @@
+import { toast } from 'react-hot-toast';
 import { colorSelected } from '../actions';
 
 // Add new todo and save them permanently to the database.
@@ -13,6 +14,10 @@ const updateColor = (todoId, color) => {
             }
         });
         const todo = await res.json();
+        if (todo.color) {
+            toast.success(`Color Changed to ${ todo.color }`)
+        }
+
 
         // actual action dispatch
         dispatch(colorSelected(todoId, color));

@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { toggled } from '../actions';
 
 // Add new todo and save them permanently to the database.
@@ -13,6 +14,14 @@ const updateStatus = (todoId, currentStatus) => {
             }
         });
         const todo = await res.json();
+        if (todo.completed === true) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Your Task Is Completed 🎇',
+                showConfirmButton: false,
+                timer: 1000
+            })
+        }
 
         // actual action dispatch
         dispatch(toggled(todo.id));

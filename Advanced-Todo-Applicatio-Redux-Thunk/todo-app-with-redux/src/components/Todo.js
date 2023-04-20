@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+
 import cancelImage from "../assets/images/cancel.png";
 
 import updateStatus from '../redux/todos/thunk/updateStatus';
@@ -21,6 +22,7 @@ export default function Todo({ todo }) {
     const handleDeleteTodo = todoId => {
         dispatch(deleteTodo(todoId))
     }
+
 
 
     return (

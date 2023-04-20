@@ -1,27 +1,9 @@
 {
   "todos": [
     {
-      "id": 2,
-      "text": "Learn Modern ES6+ JavaScript",
-      "completed": true,
-      "color": "yellow"
-    },
-    {
-      "text": "Learn Redux Basics",
+      "text": "Assignment 9 Target 30",
       "completed": false,
-      "id": 4,
-      "color": "yellow"
-    },
-    {
-      "text": "Learn Redux fundamentals",
-      "completed": false,
-      "id": 5,
-      "color": "green"
-    },
-    {
-      "text": "learn Redux",
-      "completed": false,
-      "id": 6,
+      "id": 1,
       "color": "yellow"
     }
   ]
