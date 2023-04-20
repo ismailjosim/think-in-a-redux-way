@@ -5,7 +5,7 @@ import { colorChanged, statusChanged } from '../redux/filters/actions';
 export default function Footer() {
     const todos = useSelector(state => state.todos);
     const filters = useSelector(state => state.filters);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const todosRemaining = todos.filter(todo => !todo.completed).length;
     const { status, colors } = filters;
@@ -15,24 +15,22 @@ export default function Footer() {
         switch (num) {
             case 0:
                 return "No Task";
-
             case 1:
                 return "1 Task";
             default:
-                return `${ num } Tasks`
-
+                return `${ num } Tasks`;
         }
     }
 
     const handleStatus = (status) => {
-        dispatch(statusChanged(status))
+        dispatch(statusChanged(status));
     }
 
     const handleColorChange = color => {
         if (colors.includes(color)) {
-            dispatch(colorChanged(color, "removed"))
+            dispatch(colorChanged(color, "removed"));
         } else {
-            dispatch(colorChanged(color, "added"))
+            dispatch(colorChanged(color, "added"));
         }
 
     }
