@@ -6,7 +6,7 @@ const fetchTodos = async (dispatch, getState) => {
     const todos = await res.json();
 
     // actual action dispatch
-    dispatch(loaded(todos))
+    dispatch(loaded(todos));
 
 }
 export default fetchTodos;
