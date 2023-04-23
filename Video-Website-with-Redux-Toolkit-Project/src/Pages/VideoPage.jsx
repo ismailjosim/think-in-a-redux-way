@@ -1,7 +1,8 @@
 import React from 'react';
-import Player from '../components/Player/Player';
-import Description from '../components/Description/Description';
-import RelatedVideo from '../components/RelatedVideo/RelatedVideo';
+import Player from '../components/VideoPage/Player';
+import Description from '../components/VideoPage/Description';
+import RelatedVideo from '../components/VideoPage/RelatedVideo';
+
 
 const VideoPage = () => {
     return (
@@ -12,10 +13,7 @@ const VideoPage = () => {
                         <Player />
                         <Description />
                     </div>
-
-                    {/*<!-- related videos -->*/ }
                     <div className="col-span-full lg:col-auto max-h-[570px] overflow-y-auto">
-                        {/*<!-- single related video -->*/ }
                         <RelatedVideo />
                     </div>
                 </div>

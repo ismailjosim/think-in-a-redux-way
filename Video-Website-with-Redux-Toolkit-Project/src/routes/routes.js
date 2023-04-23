@@ -3,10 +3,8 @@ import Main from '../Layouts/Main'
 import Home from '../Pages/Home';
 import VideoPage from '../Pages/VideoPage';
 
-
-
-
 const { createBrowserRouter } = require('react-router-dom');
+
 const routes = createBrowserRouter([
     {
         path: '/',
@@ -18,10 +16,9 @@ const routes = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: '/video',
+                path: '/video/:id',
                 element: <VideoPage />
             },
-
         ]
     }
 ])
