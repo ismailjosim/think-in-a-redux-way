@@ -27,15 +27,20 @@ const dynamicCounterSlice = createSlice({
     //     }
 
     // }
-    extraReducers:
-        (builder) => {
-            builder.addCase(counterActions.increment, (state, action) => {
-                state.count += 5;
-            })
-            builder.addCase(counterActions.decrement, (state, action) => {
-                state.count -= 1;
-            })
-        }
+
+    // RTK Recommended way.
+    // extraReducers:
+    //     (builder) => {
+    //         builder.addCase(counterActions.increment, (state, action) => {
+    //             state.count += 5;
+    //         })
+    //         builder.addCase(counterActions.decrement, (state, action) => {
+    //             state.count -= 1;
+    //         })
+    //     }
+
+    // Async thunks handle api call
+
 }
 
 
