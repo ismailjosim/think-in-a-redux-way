@@ -12,10 +12,10 @@ const store = configureStore({
         counter: counterReducer,
         dynamicCounter: dynamicCounterReducer
     },
-    middleware: (getDefaultMiddlewares) => {
-        console.log(getDefaultMiddlewares());
-        return getDefaultMiddlewares().concat(logger)
-    }
+    // middleware: (getDefaultMiddlewares) => {
+    //     console.log(getDefaultMiddlewares());
+    //     return getDefaultMiddlewares().concat(logger)
+    // }
 })
 
 module.exports = store; // default export.
