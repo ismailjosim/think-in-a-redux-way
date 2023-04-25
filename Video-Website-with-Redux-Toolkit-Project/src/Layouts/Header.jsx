@@ -5,8 +5,11 @@ import searchImage from '../assets/search.svg'
 import Search from '../utils/Search';
 import { Link } from 'react-router-dom';
 
-
 const Header = () => {
+
+
+
+
     return (
         <nav className="bg-slate-100 shadow-md">
             <div className="max-w-7xl mx-auto px-5 lg:px-0 flex justify-between py-3">
