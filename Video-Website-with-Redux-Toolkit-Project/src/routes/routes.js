@@ -19,6 +19,7 @@ const routes = createBrowserRouter([
                 path: '/video/:id',
                 element: <VideoPage />
             },
+
         ]
     }
 ])
