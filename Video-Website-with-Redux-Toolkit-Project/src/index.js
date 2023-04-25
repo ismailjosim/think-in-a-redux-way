@@ -10,13 +10,13 @@ import store from './redux/app/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Provider store={ store }>
-      <RouterProvider router={ routes }>
-        <App />
-      </RouterProvider>
-    </Provider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={ store }>
+    <RouterProvider router={ routes }>
+      <App />
+    </RouterProvider>
+  </Provider>
+  // </React.StrictMode>
 );
 
 reportWebVitals();

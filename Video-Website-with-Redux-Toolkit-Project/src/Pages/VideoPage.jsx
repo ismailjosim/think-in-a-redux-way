@@ -16,7 +16,7 @@ const VideoPage = () => {
 
     useEffect(() => {
         dispatch(fetchVideo(id))
-    }, [dispatch])
+    }, [id, dispatch])
 
 
     // What to render
@@ -32,9 +32,8 @@ const VideoPage = () => {
             <Player link={ video.link } title={ video.title } />
             <Description video={ video } />
         </div>
-        <div className="col-span-full lg:col-auto max-h-[570px] overflow-y-auto">
-            <RelatedVideo />
-        </div>
+        <RelatedVideo currentVideoId={ id } tags={ video.tags } />
+
     </div>
 
 

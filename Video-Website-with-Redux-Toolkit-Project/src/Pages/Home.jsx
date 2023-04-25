@@ -5,7 +5,9 @@ import Pagination from '../components/Home/Pagination';
 import Tags from '../components/Home/Tags';
 
 
+
 const Home = () => {
+
     return (
         <>
             <Tags />
