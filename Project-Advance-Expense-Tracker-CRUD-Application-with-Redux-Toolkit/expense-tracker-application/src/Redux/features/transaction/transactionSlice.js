@@ -29,7 +29,7 @@ export const updateTransaction = createAsyncThunk('transaction/updateTransaction
 })
 
 // Delete : create async Thunk
-export const removeTransactions = createAsyncThunk('transaction/removeTransactions', async (id) => {
+export const removeTransaction = createAsyncThunk('transaction/removeTransaction', async (id) => {
     const transaction = await deleteTransaction(id);
     return transaction;
 })
@@ -102,16 +102,17 @@ const transactionSlice = createSlice({
             })
 
             // delete => Transaction
-            .addCase(removeTransactions.pending, (state) => {
+            .addCase(removeTransaction.pending, (state) => {
                 state.isLoading = true;
                 state.isError = false;
             })
-            .addCase(removeTransactions.fulfilled, (state, action) => {
+            .addCase(removeTransaction.fulfilled, (state, action) => {
+                // console.log(action);
                 state.isLoading = false;
                 state.isError = false;
-                state.transactions = state.transactions.filter(t => t.id !== action.payload)
+                state.transactions = state.transactions.filter(t => t.id !== action.meta.arg) // the server didn't return id in payload that's way we use action.meta.arg to update our UI.
             })
-            .addCase(removeTransactions.rejected, (state, action) => {
+            .addCase(removeTransaction.rejected, (state, action) => {
                 state.isLoading = false;
                 state.isError = true;
                 state.error = action.error?.message;
