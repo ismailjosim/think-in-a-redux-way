@@ -1,7 +1,13 @@
+// import Footer from './Layouts/Footer';
+import Header from './Layouts/Header';
+import Main from './Layouts/Main';
+
 function App() {
     return (
-        <div className="App">
-            <div>Hello world</div>
+        <div className='app'>
+            <Header />
+            <Main />
+            {/* <Footer />*/ }
         </div>
     );
 }
