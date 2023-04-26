@@ -1,4 +1,4 @@
-import Footer from './Layouts/Footer';
+// import Footer from './Layouts/Footer';
 import Header from './Layouts/Header';
 import Main from './Layouts/Main';
 
@@ -7,7 +7,7 @@ function App() {
         <div className='app'>
             <Header />
             <Main />
-            <Footer />
+            {/* <Footer />*/ }
         </div>
     );
 }
