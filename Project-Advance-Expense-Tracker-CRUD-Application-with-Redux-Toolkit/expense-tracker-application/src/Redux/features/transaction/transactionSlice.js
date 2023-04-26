@@ -110,7 +110,7 @@ const transactionSlice = createSlice({
                 // console.log(action);
                 state.isLoading = false;
                 state.isError = false;
-                state.transactions = state.transactions.filter(t => t.id !== action.meta.arg)
+                state.transactions = state.transactions.filter(t => t.id !== action.meta.arg) // the server didn't return id in payload that's way we use action.meta.arg to update our UI.
             })
             .addCase(removeTransaction.rejected, (state, action) => {
                 state.isLoading = false;
