@@ -8,19 +8,13 @@ const Form = () => {
     const [amount, setAmount] = useState('');
 
     const dispatch = useDispatch();
-    const { transactions, isLoading, isError, error } = useSelector(state => state.transaction);
-
+    const { isLoading, isError } = useSelector(state => state.transaction);
 
 
     const handleTransaction = e => {
         e.preventDefault();
         dispatch(createTransaction({ name, type, amount: Number(amount) }))
     }
-
-
-
-
-
 
 
     return (
