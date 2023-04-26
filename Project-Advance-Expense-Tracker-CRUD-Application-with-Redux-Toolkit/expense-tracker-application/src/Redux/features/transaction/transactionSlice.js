@@ -6,7 +6,8 @@ const initialState = {
     transactions: [],
     isLoading: false,
     isError: false,
-    error: ""
+    error: "",
+    editing: {}
 }
 
 //Get: create async Thunk
@@ -37,6 +38,14 @@ export const removeTransactions = createAsyncThunk('transaction/removeTransactio
 const transactionSlice = createSlice({
     name: "transaction",
     initialState,
+    reducers: {
+        editActive: (state, action) => {
+            state.editing = action.payload;
+        },
+        editInactive: (state) => {
+            state.editing = {}
+        }
+    },
     extraReducers: (builder) => {
         builder
 
@@ -112,3 +121,4 @@ const transactionSlice = createSlice({
 })
 
 export default transactionSlice.reducer;
+export const { editInactive, editActive } = transactionSlice.actions;
