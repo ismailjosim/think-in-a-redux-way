@@ -18,7 +18,7 @@ export default function Description() {
                         <div className="shrink-0">
                             <img
                                 className="w-5 block"
-                                src={editImage}
+                                src={ editImage }
                                 alt="Edit"
                             />
                         </div>
@@ -32,7 +32,7 @@ export default function Description() {
                         <div className="shrink-0">
                             <img
                                 className="w-5 block"
-                                src={deleteImage}
+                                src={ deleteImage }
                                 alt="Delete"
                             />
                         </div>

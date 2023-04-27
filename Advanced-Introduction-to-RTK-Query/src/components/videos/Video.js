@@ -21,7 +21,7 @@ export default function Video() {
 
                 <div className="flex flex-row mt-2 gap-2">
                     <img
-                        src={authorImage}
+                        src={ authorImage }
                         className="rounded-full h-6 w-6 shrink-0"
                         alt="Learn with Sumit"
                     />

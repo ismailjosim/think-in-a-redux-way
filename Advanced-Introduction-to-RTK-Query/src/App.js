@@ -11,10 +11,10 @@ function App() {
         <Router>
             <Navigation />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/videos/:videoId" element={<Video />} />
-                <Route path="/videos/add" element={<Add />} />
-                <Route path="/videos/edit/:videoId" element={<Edit />} />
+                <Route path="/" element={ <Home /> } />
+                <Route path="/videos/:videoId" element={ <Video /> } />
+                <Route path="/videos/add" element={ <Add /> } />
+                <Route path="/videos/edit/:videoId" element={ <Edit /> } />
             </Routes>
             <Footer />
         </Router>
