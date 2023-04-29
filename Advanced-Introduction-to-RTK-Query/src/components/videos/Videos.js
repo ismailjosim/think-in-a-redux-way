@@ -4,14 +4,8 @@ import Error from '../ui/Error';
 import VideoLoader from '../ui/loaders/VideoLoader';
 import SingleVideo from './SingleVideo';
 
-
-
-
 const Videos = () => {
     const { data, isError, isLoading } = useGetVideosQuery();
-
-
-
 
     let content = null;
     if (isLoading) {
@@ -19,7 +13,7 @@ const Videos = () => {
     }
 
     if (!isLoading && isError) {
-        content = <Error message="There was an error"></Error>
+        content = <Error />
     }
 
     if (!isLoading && !isError && data.length === 0) {
@@ -27,8 +21,6 @@ const Videos = () => {
     } else {
         content = data?.map(item => <SingleVideo key={ item.id } video={ item }></SingleVideo>)
     }
-
-
 
     return (
         <>
