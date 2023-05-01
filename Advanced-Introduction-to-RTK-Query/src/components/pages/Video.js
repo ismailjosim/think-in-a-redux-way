@@ -41,7 +41,7 @@ export default function Video() {
                         { content }
                     </div>
 
-                    { data?.id ? <RelatedVideos /> : isLoading ? <RelatedVideoLoader /> : <Error /> }
+                    { data?.id ? <RelatedVideos id={ data.id } title={ data.title } /> : isLoading ? <RelatedVideoLoader /> : <Error /> }
                 </div>
             </div>
         </section>
