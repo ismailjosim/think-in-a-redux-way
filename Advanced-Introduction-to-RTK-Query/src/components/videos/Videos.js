@@ -5,7 +5,7 @@ import VideoLoader from '../ui/loaders/VideoLoader';
 import SingleVideo from './SingleVideo';
 
 const Videos = () => {
-    const { data, isError, isLoading } = useGetVideosQuery();
+    const { data, isError, isLoading } = useGetVideosQuery(undefined);
 
     let content = null;
     if (isLoading) {
