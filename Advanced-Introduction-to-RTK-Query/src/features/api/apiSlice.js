@@ -22,9 +22,18 @@ export const apiSlice = createApi({
 
             }
         }),
+        addVideo: builder.mutation({ // Add Video
+            // query: (body) => `/videos`,
+            // another method
+            query: (data) => ({
+                url: "/videos",
+                method: 'POST',
+                body: data
+            })
+        }),
 
 
     }),
 });
 
-export const { useGetVideosQuery, useGetVideoQuery, useGetRelatedVideosQuery } = apiSlice;
+export const { useGetVideosQuery, useGetVideoQuery, useGetRelatedVideosQuery, useAddVideoMutation } = apiSlice;
