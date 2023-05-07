@@ -1,15 +1,32 @@
-import Video from "./Video";
+import React from 'react';
+import { useGetVideosQuery } from '../../features/api/apiSlice';
+import Error from '../ui/Error';
+import VideoLoader from '../ui/loaders/VideoLoader';
+import SingleVideo from './SingleVideo';
 
-export default function Videos() {
+const Videos = () => {
+    const { data, isError, isLoading } = useGetVideosQuery(undefined);
+
+    let content = null;
+    if (isLoading) {
+        content = <VideoLoader></VideoLoader>
+    }
+
+    if (!isLoading && isError) {
+        content = <Error />
+    }
+
+    if (!isLoading && !isError && data.length === 0) {
+        content = <Error message="No Videos Found!"></Error>
+    } else {
+        content = data?.map(item => <SingleVideo key={ item.id } video={ item }></SingleVideo>)
+    }
+
     return (
         <>
-            <Video />
-            <Video />
-            <Video />
-            <Video />
-            <Video />
-            <Video />
-            <Video />
+            { content }
         </>
     );
-}
+};
+
+export default Videos;
