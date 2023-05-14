@@ -22,11 +22,9 @@ const Videos = () => {
         content = data?.map(item => <SingleVideo key={ item.id } video={ item }></SingleVideo>)
     }
 
-    return (
-        <>
-            { content }
-        </>
-    );
+    return <>{ content }</>
+
+
 };
 
 export default Videos;
