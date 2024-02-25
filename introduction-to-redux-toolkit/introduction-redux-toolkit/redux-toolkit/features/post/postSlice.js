@@ -42,9 +42,6 @@ module.exports = postSlice.reducer;
 module.exports.fetchPost = fetchPost;
 
 
-
-
-
 /*
 * When we return a promise from createAsyncThunk function it will automatically return 3 action.
 ? 1. promise.pending
