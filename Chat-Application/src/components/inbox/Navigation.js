@@ -9,13 +9,13 @@ export default function Navigation() {
                     <Link to="/">
                         <img
                             className="h-10"
-                            src={logoImage}
+                            src={ logoImage }
                             alt="Learn with Sumit"
                         />
                     </Link>
                     <ul>
                         <li className="text-white">
-                            <a href="#">Logout</a>
+                            <a href="/logout">Logout</a>
                         </li>
                     </ul>
                 </div>
