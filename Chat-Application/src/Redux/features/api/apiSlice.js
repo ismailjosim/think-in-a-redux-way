@@ -8,9 +8,10 @@ export const apiSlice = createApi({
         // send bearer token for each api request
         prepareHeaders: async (headers, { getState, endpoint }) => {
             // get token from getState
-            const token = getState?.auth?.accessToken;
+            const token = getState()?.auth?.accessToken;
+
             if (token) {
-                headers.set("authorization", `Bearer ${ token }`)
+                headers.set("Authorization", `Bearer ${ token }`)
             }
 
             return headers;
