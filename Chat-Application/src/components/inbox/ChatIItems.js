@@ -25,7 +25,7 @@ export default function ChatItems() {
     } else if (!isLoading && isError) {
         content = (
             <li className='m-2 text-center'>
-                <Error message={ error }></Error>
+                <Error message={ error?.data }></Error>
             </li>
         )
     } else if (!isError && !isLoading && conversations?.length === 0) {
@@ -34,8 +34,6 @@ export default function ChatItems() {
         content = conversations?.map((conversation, index) => {
             const { id, message, timestamp } = conversation || {}
             const { name, email: partnerEmail } = getPartnerInfo(conversation.users, email)
-
-
             return (
                 <li key={ index }>
                     <Link to={ `/inbox/${ id }` }>
